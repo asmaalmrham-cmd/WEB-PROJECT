@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - 88 Canteen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>88 Canteen</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="menu.html" class="active"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="menu-page">
+        <div class="container">
+            <div class="section-title">
+                <h1>Our Menu</h1>
+                <p>Authentic Arabic Cuisine</p>
+            </div>
+
+            <!-- Menu Filter -->
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="shawarma">Shawarma</button>
+                <button class="filter-btn" data-filter="rice">Arabic Rice</button>
+                <button class="filter-btn" data-filter="appetizer">Appetizers</button>
+                <button class="filter-btn" data-filter="drink">Drinks</button>
+                <div class="search-box">
+                    <input type="text" id="menuSearch" placeholder="Search menu items...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuContainer">
+                <!-- Dynamically loaded from JS -->
+            </div>
+
+            <!-- Order Summary Modal -->
+            <div id="orderModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add to Cart</h2>
+                    <div id="modalItemDetails"></div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                        <input type="number" id="itemQty" value="1" min="1" max="10">
+                        <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="special-instructions">
+                        <textarea id="instructions" placeholder="Special instructions (optional)"></textarea>
+                    </div>
+                    <button id="addToCartBtn" class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>88 Canteen</h3>
+                    <p>Serving authentic Arabic cuisine in IIUM since 2015.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> IIUM Campus, Gombak</p>
+                    <p><i class="fas fa-phone"></i> +60 12-345 6789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 88 Canteen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

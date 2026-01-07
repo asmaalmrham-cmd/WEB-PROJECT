@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - 88 Canteen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>88 Canteen</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="login.html" class="btn-login active"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div class="auth-form active" id="loginForm">
+                    <div class="auth-header">
+                        <h1>Welcome Back</h1>
+                        <p>Login to your account</p>
+                    </div>
+                    
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        
+                        <div class="auth-divider">
+                            <span>or continue with</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="social-btn google">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="social-btn facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="#" class="switch-form" data-target="signup">Sign up</a></p>
+                    </div>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="auth-form" id="signupForm">
+                    <div class="auth-header">
+                        <h1>Create Account</h1>
+                        <p>Join 88 Canteen today</p>
+                    </div>
+                    
+                    <form id="signupFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="signupFirstName">First Name</label>
+                                <input type="text" id="signupFirstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signupLastName">Last Name</label>
+                                <input type="text" id="signupLastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" required>
+                            <div class="error-message" id="signupEmailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="signupPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar"></div>
+                                <span class="strength-text">Password strength: Weak</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required>
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentId">Student ID (Optional)</label>
+                            <input type="text" id="studentId" placeholder="For student discount">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" required>
+                                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#" class="switch-form" data-target="login">Login</a></p>
+                    </div>
+                </div>
+
+                <!-- Welcome Message (shown after successful login) -->
+                <div class="welcome-message" id="welcomeMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Welcome to 88 Canteen!</h2>
+                    <p>Your account has been created successfully.</p>
+                    <div class="welcome-actions">
+                        <a href="index.html" class="btn btn-primary">Go to Home</a>
+                        <a href="menu.html" class="btn btn-secondary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="auth-banner">
+                <div class="banner-content">
+                    <h2>Join 88 Canteen Family</h2>
+                    <p>Get exclusive benefits:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 10% Student Discount</li>
+                        <li><i class="fas fa-check"></i> Free Delivery for Members</li>
+                        <li><i class="fas fa-check"></i> Early Access to Promotions</li>
+                        <li><i class="fas fa-check"></i> Order History Tracking</li>
+                    </ul>
+                </div>
+                <div class="banner-image">
+                    <!-- Food image would be here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 88 Canteen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

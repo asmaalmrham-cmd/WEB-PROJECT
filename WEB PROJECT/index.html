@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>88 Canteen - Authentic Arabic Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>88 Canteen</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Authentic Arabic Flavors</h1>
+            <p>Experience the taste of the Middle East at IIUM's favorite canteen</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+                <a href="#specials" class="btn btn-secondary">Today's Specials</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop id="heroVideo">
+            <source src="assets/videos/arabic-food.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <audio id="backgroundMusic" loop>
+            <source src="assets/audio/arabic-music.mp3" type="audio/mpeg">
+        </audio>
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-music"></i>
+        </button>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose 88 Canteen?</h2>
+                <p>Discover what makes us special</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Open 7 Days</h3>
+                    <p>We're open every day from 8AM to 10PM</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Delivery</h3>
+                    <p>Free campus delivery for orders above RM20</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Authentic Taste</h3>
+                    <p>Traditional recipes from the Middle East</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Student Discount</h3>
+                    <p>10% off for all IIUM students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section class="specials" id="specials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Today's Specials</h2>
+                <p>Limited time offers</p>
+            </div>
+            <div class="specials-grid" id="specialsContainer">
+                <!-- Dynamically loaded from JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us</h2>
+                <p>Visit our canteen at IIUM</p>
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                    <p>88 Canteen, International Islamic University Malaysia</p>
+                    <p>Gombak, 53100 Kuala Lumpur</p>
+                    <p><i class="fas fa-clock"></i> Open: 8:00 AM - 10:00 PM</p>
+                    <p><i class="fas fa-phone"></i> Phone: +60 12-345 6789</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>88 Canteen</h3>
+                    <p>Serving authentic Arabic cuisine in IIUM since 2015.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html">Order Online</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> IIUM Campus, Gombak</p>
+                    <p><i class="fas fa-phone"></i> +60 12-345 6789</p>
+                    <p><i class="fas fa-envelope"></i> info@88canteen.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and promotions</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 88 Canteen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

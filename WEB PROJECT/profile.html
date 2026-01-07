@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - 88 Canteen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>88 Canteen</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="profile-page">
+        <div class="container">
+            <div class="section-title">
+                <h1>My Profile</h1>
+                <p>Manage your account and orders</p>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                            <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <h2 id="userName">Guest User</h2>
+                        <p id="userEmail">guest@example.com</p>
+                        <p class="member-since">Member since: January 2024</p>
+                    </div>
+                    
+                    <div class="profile-menu">
+                        <a href="#personal" class="profile-menu-item active">
+                            <i class="fas fa-user"></i> Personal Info
+                        </a>
+                        <a href="#orders" class="profile-menu-item">
+                            <i class="fas fa-receipt"></i> My Orders
+                        </a>
+                        <a href="#addresses" class="profile-menu-item">
+                            <i class="fas fa-map-marker-alt"></i> Addresses
+                        </a>
+                        <a href="#settings" class="profile-menu-item">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <!-- Personal Info Tab -->
+                    <div id="personal" class="profile-tab active">
+                        <h2>Personal Information</h2>
+                        <form id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmail">Email Address</label>
+                                <input type="email" id="profileEmail" value="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePhone">Phone Number</label>
+                                <input type="tel" id="profilePhone" value="+60 12-345 6789">
+                            </div>
+                            <div class="form-group">
+                                <label for="studentId">Student ID (for discount)</label>
+                                <input type="text" id="studentId" placeholder="e.g., 123456">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Orders Tab -->
+                    <div id="orders" class="profile-tab">
+                        <h2>Order History</h2>
+                        <div class="orders-list" id="ordersList">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <span class="order-id">Order #001</span>
+                                    <span class="order-date">15 Jan 2024</span>
+                                    <span class="order-status delivered">Delivered</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>Chicken Shawarma (2), Lamb Mandi (1), Coke (2)</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">Total: RM 45.50</span>
+                                    <button class="btn btn-small">Reorder</button>
+                                </div>
+                            </div>
+                            <!-- More orders would be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Addresses Tab -->
+                    <div id="addresses" class="profile-tab">
+                        <h2>Saved Addresses</h2>
+                        <div class="addresses-grid">
+                            <div class="address-card">
+                                <h3><i class="fas fa-home"></i> Home</h3>
+                                <p>Mahallah Ali, Room 205</p>
+                                <p>IIUM Campus, Gombak</p>
+                                <p>53100 Kuala Lumpur</p>
+                                <div class="address-actions">
+                                    <button class="btn btn-small"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="btn btn-small btn-danger"><i class="fas fa-trash"></i> Remove</button>
+                                </div>
+                            </div>
+                            <div class="address-card add-new">
+                                <i class="fas fa-plus-circle"></i>
+                                <h3>Add New Address</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div id="settings" class="profile-tab">
+                        <h2>Account Settings</h2>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <h3>Notifications</h3>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <h3>Email Updates</h3>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <h3>Student Discount</h3>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash"></i> Delete Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 88 Canteen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
